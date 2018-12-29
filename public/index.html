@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Welcome to your Strapi app</title>
+    <title>CDN | Miles Lemon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       * {
@@ -16,9 +16,36 @@
         padding: 40px 0;
       }
 
+      html:after {
+        content: "";
+        animation: 0.5s infinite noise;
+        background: url("background_noise.png");
+        background-size: 40%;
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      @keyframes noise {
+        0%, 100% { background-position: 0 0; }
+        10% { background-position: -5% -10%; }
+        20% { background-position: -15% 5%; }
+        30% { background-position: 7% -25%; }
+        40% { background-position: 20% 25%; }
+        50% { background-position: -25% 10%; } 
+        60% { background-position: 15% 5%; }
+        70% { background-position: 0% 15%; }
+        80% { background-position: 25% 35%; }
+        90% { background-position: -10% 10%; }
+      }
+
       body {
-        font: 17px/1.5 "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-        background: white;
+        font: 17px/1.5 Helvetica, Arial, Verdana, sans-serif;
+        background: #fdfaeb;
         margin: 0;
         color: #33333d;
         overflow-y: scroll;
@@ -26,7 +53,10 @@
       }
 
       h1 {
-        font-size: 1.6em;
+        letter-spacing: 5px;
+        text-align: center;
+        font-size: 1em;
+        font-weight: lighter;
         margin-top: 0;
       }
 
@@ -71,6 +101,14 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+      }
+
+      .circle {
+        padding: 32px;
+        max-width: 500px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
       }
 
       @media screen and (min-width:40em) {
@@ -142,23 +180,8 @@
   <body lang="en">
     <section>
       <div class="wrapper">
-        <h1>Welcome.</h1>
-        <p>You successfully created your Strapi application.</p>
-        <p>You are looking at: <code>./public/index.html</code>.</p>
-        <p>Your built-in admin panel is available at <a href="/admin" target="blank">/admin</a>.
-        <h2>Create your first API</h2>
-        <p>Easily generate a complete API with controllers, models and routes using:</p>
-        <pre><code class="lang-bash">$ strapi generate:api &lt;apiName&gt;</code></pre>
-        <h2>Resources</h2>
-        <p>You'll probably also want to learn how to customize your application, set up security and configure your data sources.</p>
-        <p>For more help getting started, check out:
-          <ul>
-            <li><a href="http://strapi.io/documentation/introduction" target="blank">Documentation</a></li>
-            <li><a href="https://github.com/strapi/strapi" target="blank">Repository on GitHub</a></li>
-            <li><a href="https://twitter.com/strapijs" target="blank">news on Twitter</a></li>
-            <li><a href="http://slack.strapi.io" target="blank">Real-time support on Slack</a></li>
-          </ul>
-        </p>
+        <img class="circle" src="circle.svg" alt="circle">
+        <h1>CDN | MILES LEMON</h1>
       </div>
     </section>
   </body>
