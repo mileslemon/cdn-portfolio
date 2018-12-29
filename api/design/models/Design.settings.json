@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "design",
+  "info": {
+    "name": "design",
+    "description": "Design portfolio item."
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "type": {
+      "default": "",
+      "type": "string",
+      "required": true
+    }
+  }
+}
