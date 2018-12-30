@@ -30,6 +30,12 @@
       "default": "",
       "type": "string",
       "required": true
+    },
+    "slug": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
     }
   }
 }

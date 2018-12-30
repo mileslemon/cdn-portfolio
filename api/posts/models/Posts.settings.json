@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "posts",
   "info": {
     "name": "posts",
     "description": "Blog posts."
@@ -23,6 +23,12 @@
     "body": {
       "default": "",
       "type": "text",
+      "required": true
+    },
+    "slug": {
+      "default": "",
+      "unique": true,
+      "type": "string",
       "required": true
     }
   }
